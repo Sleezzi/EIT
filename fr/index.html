@@ -6,6 +6,14 @@
     <title>EIT - Lampe Led RGBA</title>
     <link rel="shortcut icon" href="/EIT/cdn/img/Logo2.png" type="image/x-icon">
 </head>
+<script>
+    // load particle.js
+     window.onload = function() {
+        let clause = window.innerWidth < 768;
+        config.particles.number.value = clause ? 80 : 150;
+        particlesJS(“particle”, config);
+    };
+</script>
 <body class="dark" style="margin: 0; height: 100%; width: 100%;">
     <style>
         body.dark {
@@ -127,12 +135,6 @@
             document.body.classList.remove("dark");
             document.body.classList.add("light");
         }     
-        // load particle.js
-        window.onload = function() {
-             let clause = window.innerWidth < 768;
-             config.particles.number.value = clause ? 80 : 150;
-             particlesJS(“particle”, config);
-        };
     </script>
 </body>
 </html>
