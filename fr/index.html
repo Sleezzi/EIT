@@ -57,7 +57,7 @@
                 </button>
             </div>
         </div>
-        <div id="content particles-js" style="display: flex; margin: 0;">
+        <div id="content particles" style="display: flex; margin: 0;">
             <div style="margin: 0; height: 100%; width: 65%;">
                 <div style="height: 100%; width: 100%; margin: 5% 0 0 0">
                     <div style="display: flex; align-items: center; justify-content: center; height: 100%; width: 100%">
@@ -116,6 +116,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
     
     <script src="particles.js"></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js"></script>
     
     <script>
         if (localStorage.getItem("theme") === undefined || localStorage.getItem("theme") === null) localStorage.setItem("theme", "dark");
@@ -125,7 +126,13 @@
             document.getElementById("theme").querySelector("img").src = "/EIT/cdn/img/moon.png";
             document.body.classList.remove("dark");
             document.body.classList.add("light");
-        }       
+        }     
+        // load particle.js
+        window.onload = function() {
+             let clause = window.innerWidth < 768;
+             config.particles.number.value = clause ? 80 : 150;
+             particlesJS(“particle”, config);
+        };
     </script>
 </body>
 </html>
