@@ -6,14 +6,6 @@
     <title>EIT - Lampe Led RGBA</title>
     <link rel="shortcut icon" href="/EIT/cdn/img/Logo2.png" type="image/x-icon">
 </head>
-<script>
-    // load particle.js
-     window.onload = function() {
-        let clause = window.innerWidth < 768;
-        config.particles.number.value = clause ? 80 : 150;
-        particlesJS(“particle”, config);
-    };
-</script>
 <body class="dark" style="margin: 0; height: 100%; width: 100%;">
     <style>
         body.dark {
@@ -36,7 +28,7 @@
             }
         }
     </style>
-    <div id="content">
+    <div id="content particle-js">
         <div id="header" style="background: rgba(0, 0, 0, 0.25); border-bottom: 2px solid rgba(255, 255, 255, 0.25); display: flex; justify-content: space-between; align-items: center;">
             <div style="height: 100%; margin: 0;">
                 <a href="/EIT/fr/index.html" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
@@ -124,7 +116,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
     
     <script src="particles.js"></script>
-    <script src=”https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js"></script>
+    <script src="app.js"></script>
+
     
     <script>
         if (localStorage.getItem("theme") === undefined || localStorage.getItem("theme") === null) localStorage.setItem("theme", "dark");
