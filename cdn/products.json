@@ -11,6 +11,7 @@
             "name": "Lampe LED RGB",
             "description": "Lampe Led sur Pied Design RVB avec Télécommande",
             "price": "14.99€",
+            "buy": "Acheter",
             "char": [
                 { "title": "Charactéristique" },
                 { "name": "Taille", "value": "?cm" },
@@ -24,6 +25,7 @@
             "name": "LED Lamp RGB",
             "description": "Led Floor Lamp Design RGB with Remote Control",
             "price": "14.99£",
+            "buy": "Buy",
             "char": [
                 { "title": "Characteristic" },
                 { "name": "Size", "value": "?cm" },
