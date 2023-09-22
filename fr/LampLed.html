@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +7,10 @@
     <link rel="shortcut icon" href="/EIT/cdn/img/Logo.png" type="image/x-icon">
 </head>
 <body class="dark" style="margin: 0; height: 100%; width: 100%;">
-    <style>
-        body.dark {
-            background: #333;
-            color: white;
-        }
-        body.light {
-            background: #FFF;
-            color: black;
-        }
-        .fade {
-            animation: .5s ease 0s 1 normal none running fade;
-        }
-        @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 100%;
-            }
-        }
-    </style>
     <div id="content">
         <div id="header" style="background: rgba(0, 0, 0, 0.25); border-bottom: 2px solid rgba(255, 255, 255, 0.25); display: flex; justify-content: space-between; align-items: center;">
             <div style="height: 100%; margin: 0;">
-                <a href="/EIT/fr/index.html" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
+                <a id="home" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
             </div>
             <div style="margin: 0;">
                 <button id="theme" style="cursor: pointer; display: flex; margin: 5px; height: 100%;width: 35px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 5px; background: white;">
@@ -113,8 +92,14 @@
             document.getElementById("title").innerText = data.name ?? cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "");
             document.getElementById("description").innerText = data.description;
             document.getElementById("price").innerText = data.price;
-            document.getElementById("charTitle").innerText = data.char[0].title;
+            document.getElementById("buy").innerText = data.char.buy;
+            document.getElementById("home").setAttribute("href", `/${cuttedPage[`${window.location.href.split("/").length-3}`]}/${window.location.href.split("/").length-2}/index.html`);
             document.title = `${cuttedPage[`${window.location.href.split("/").length-3}`]} - ${cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "")}`;
+            document.getElementById("charTitle").innerText = data.char[0].title;
+            const style = document.createElement("link");
+            style.rel = "stylesheet";
+            style.href = `/${cuttedPage[`${window.location.href.split("/").length-3}`]}/cdn/style/${cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "")}.css`;
+            document.head.appendChild(style);
             data.char.forEach(char => {
                 if (!char.name || !char.value) return;
                 const span = document.createElement("span");
@@ -123,7 +108,7 @@
                 document.getElementById("charContent").appendChild(span);
             });
             localStorage.setItem("image", JSON.stringify({ current: 1, max: response[cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "")].pictures.length }));
-            document.getElementById("image").innerHTML = `<img style="height: 100%;width: 100%;" src="/EIT/cdn/products/${cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "")}/1.png">`;
+            document.getElementById("image").innerHTML = `<img style="height: 100%;width: 100%;" src="/${cuttedPage[`${window.location.href.split("/").length-3}`]}/cdn/products/${cuttedPage[`${window.location.href.split("/").length-1}`].replace(".html", "")}/1.png">`;
         });
     </script>
 </body>
