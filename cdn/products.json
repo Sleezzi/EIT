@@ -18,7 +18,8 @@
                 { "name": "Poid", "value": "?g" },
                 { "name": "Chargeur", "value": "USB C" },
                 { "name": "Télécommande", "value": "Pile AAA x2 (not supplied)" },
-                { "name": "Couleur", "value": "Noir" }
+                { "name": "Couleur", "value": "Noir" },
+                { "name": "Consommation", "value": "? Watts" }
             ]
         },
         "en": {
@@ -32,7 +33,8 @@
                 { "name": "Length", "value": "?g" },
                 { "name": "Charger", "value": "USB C" },
                 { "name": "Remote", "value": "AAA battery x2 (not supplied)" },
-                { "name": "Color", "value": "Black" }
+                { "name": "Color", "value": "Black" },
+                { "name": "Consumption", "value": "? Watts" }
             ]
         }
     }
