@@ -36,6 +36,21 @@
                 { "name": "Color", "value": "Black" },
                 { "name": "Consumption", "value": "? Watts" }
             ]
+        },
+        "es": {
+            "name": "Lámpara LED RGB",
+            "description": "Lámpara de Pie Led Diseño RGB con Mando a Distancia",
+            "price": "14.99€",
+            "buy": "Comprar",
+            "char": [
+                { "title": "Característica" },
+                { "name": "Tamaño", "value": "?cm" },
+                { "name": "Longitud", "value": "?g" },
+                { "name": "Cargador", "value": "USB C" },
+                { "name": "Remoto", "value": "Batería AAA x2 (no incluida)" },
+                { "name": "Color", "value": "Negro" },
+                { "name": "consumo", "value": "? Watts" }
+            ]
         }
     }
 }
