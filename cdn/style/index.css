@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body.dark {
+    background: #333;
+    color: white;
+}
+body.light {
+    background: #FFF;
+    color: black;
+}
+
+.fade {
+    animation: .5s ease 0s 1 normal none running fade;
+}
+
+footer {
+    margin: 2% 0 0 0;
+    background: rgba(0, 0, 0, .15);
+}
+
+footer > span {
+    display: block;
+    margin: 3px;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+}
+
+.sidenav * {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav *:hover {
+    color: #111;
+}
+  
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav.active {
+    right: 0;
+}
+
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+  
