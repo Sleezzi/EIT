@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", async function() {
     
     document.getElementById("lang").addEventListener("change", function() {
         if (cuttedPage[window.location.href.split("/").length-2] === event.target.id) return;
-        window.location.href = `https://${cuttedPage[window.location.href.split("/").length-3]}/${event.target.value ?? event.target.id}/index.html`;
+        window.location.href = `https://${window.location.host}/${cuttedPage[window.location.href.split("/").length-3]}/${event.target.value ?? event.target.id}/index.html`;
     });
 });
