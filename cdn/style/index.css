@@ -8,6 +8,11 @@ body.dark {
     background: #333;
     color: white;
 }
+
+body.dark > header > div > button {
+    filter: invert();
+}
+
 body.light {
     background: #FFF;
     color: black;
