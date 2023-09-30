@@ -36,30 +36,36 @@ footer > span {
 button {
     background: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 .sidenav {
     height: 100%;
-    width: 250px;
+    width: 20%;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: -250px;
-    background-color: #e8e8e8;
+    right: -20%;
+    background: #e8e8e8;
     padding-top: 60px;
     transition: right 0.5s ease;
+    border-radius: 2vh 0 0 2vh;
 }
 
-.sidenav * {
-    padding: 8px 8px 8px 32px;
+.sidenav > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sidenav > div > * {
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display: block;
     transition: 0.3s;
 }
 
-.sidenav *:hover {
+.sidenav > div > *:hover {
     color: #111;
 }
   
@@ -76,8 +82,14 @@ button {
 .sidenav .close {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 5px;
     font-size: 36px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.sidenav .close:hover {
+    color: red;
 }
 
 .burger-icon span {
