@@ -28,13 +28,9 @@ footer > span {
     text-align: center;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
+button {
+    background: transparent;
+    border: 0;
 }
 
 .sidenav {
@@ -86,4 +82,12 @@ footer > span {
     background-color: black;
     margin: 6px 0;
 }
-  
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
