@@ -1,0 +1,29 @@
+{
+    "en": {
+        "name": "English",
+        "prefix": "en",
+        "buy": "buy",
+        "contact": "contact",
+        "legalInformation": "legal information",
+        "home": "home",
+        "close": "close"
+    },
+    "fr": {
+        "name": "Français",
+        "prefix": "fr",
+        "buy": "acheter",
+        "contact": "contact",
+        "legalInformation": "information légal",
+        "home": "accueil",
+        "close": "fermer"
+    },
+    "es": {
+        "name": "Español",
+        "prefix": "es",
+        "buy": "comprar",
+        "contact": "contactar",
+        "legalInformation": "información legal",
+        "home": "hogar",
+        "close": "cerca"
+    }
+}
