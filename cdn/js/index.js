@@ -23,18 +23,11 @@ document.addEventListener("DOMContentLoaded", async function() {
                 element.id = lang;
                 element.value = lang;
                 element.innerText = response[lang].name;
-                if (lang === cuttedPage[cuttedPage.length-2]) document.getElementById("lang").ariaSelected = `${lang}`;
+                if (lang === cuttedPage[cuttedPage.length-2]) element.selected = true;
                 document.getElementById("lang").appendChild(element);
             }
         }
     });
-    //      Place the selector on the current language
-    for (let i = 0; i < document.getElementById("lang").options.length; i++) {
-        if (document.getElementById("lang").options[i].value === cuttedPage[cuttedPage.length-2]) {
-            document.getElementById("lang").selectedIndex = i;
-            break;
-        }
-    }
     
     //      Redirect the user when they change the language
     document.getElementById("lang").addEventListener("change", function() {
