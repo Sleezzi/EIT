@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     
         if ((localStorage.getItem("lang") === undefined || localStorage.getItem("lang") === null) && Object.hasOwnProperty.call(response, navigator.language.replace(navigator.language.slice(2), ""))) {
             localStorage.setItem("lang", navigator.language.replace(navigator.language.slice(2), ""));
-            return window.location.href = `https://${window.location.host}/${cuttedPage[window.location.href.split("/").length-3]}/${navigator.language.replace(navigator.language.slice(2), "")}/index.html`;
+            return window.location.href = `https://${window.location.host}/${cuttedPage[cuttedPage.length-3]}/${navigator.language.replace(navigator.language.slice(2), "")}/index.html`;
         }
 
     //      Add the language to the language selector
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", async function() {
                 element.id = lang;
                 element.value = lang;
                 element.innerText = lang.name;
-                if (lang === cuttedPage[window.location.href.split("/").length-2]) document.getElementById("lang").ariaSelected = `${lang}`;
+                if (lang === cuttedPage[cuttedPage.length-2]) document.getElementById("lang").ariaSelected = `${lang}`;
                 document.getElementById("lang").appendChild(element);
             }
         }
     });
     //      Place the selector on the current language
     for (let i = 0; i < document.getElementById("lang").options.length; i++) {
-        if (document.getElementById("lang").options[i].value === cuttedPage[window.location.href.split("/").length-2]) {
+        if (document.getElementById("lang").options[i].value === cuttedPage[cuttedPage.length-2]) {
             document.getElementById("lang").selectedIndex = i;
             break;
         }
@@ -37,8 +37,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     
     //      Redirect the user when they change the language
     document.getElementById("lang").addEventListener("change", function() {
-        if (cuttedPage[window.location.href.split("/").length-2] === event.target.id) return;
-        window.location.href = `https://${window.location.host}/${cuttedPage[window.location.href.split("/").length-3]}/${event.target.value ?? event.target.id}/index.html`;
+        if (cuttedPage[cuttedPage.length-2] === event.target.id) return;
+        localStorage.setItem("lang", event.target.value ?? event.target.id);
+        window.location.href = `https://${window.location.host}/${cuttedPage[cuttedPage.length-3]}/${event.target.value ?? event.target.id}/index.html`;
     });
 
     //      Change the theme
