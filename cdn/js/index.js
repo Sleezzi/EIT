@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 const element = document.createElement("option");
                 element.id = lang;
                 element.value = lang;
-                element.innerText = lang.name;
+                element.innerText = response[lang].name;
                 if (lang === cuttedPage[cuttedPage.length-2]) document.getElementById("lang").ariaSelected = `${lang}`;
                 document.getElementById("lang").appendChild(element);
             }
