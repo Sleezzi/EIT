@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     //      Retrieves the list of available languages
     fetch("/EIT/cdn/lang.json", { method: "GET", cache: "no-cache", mode: "no-cors" }).then(resp => {if (resp.status === 200) return resp.json()}).then(response => {
     
-        if ((localStorage.getItem("lang") === undefined || localStorage.getItem("lang") === null) && Object.hasOwnProperty.call(response, navigator.language.replace(navigator.language.slice(2), ""))) return window.location.href = `https://${window.location.host}/${cuttedPage[window.location.href.split("/").length-3]}/${navigator.language.replace(navigator.language.slice(2), "")}/index.html`;
+        if ((localStorage.getItem("lang") === undefined || localStorage.getItem("lang") === null) && Object.hasOwnProperty.call(response, navigator.language.replace(navigator.language.slice(2), ""))) {
+            localStorage.setItem("lang", navigator.language.replace(navigator.language.slice(2), ""));
+            return window.location.href = `https://${window.location.host}/${cuttedPage[window.location.href.split("/").length-3]}/${navigator.language.replace(navigator.language.slice(2), "")}/index.html`;
+        }
 
     //      Add the language to the language selector
         for (const lang in response) {
