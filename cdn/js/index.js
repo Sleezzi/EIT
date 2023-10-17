@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     //      Redirect the user when they change the language
     document.getElementById("lang").addEventListener("change", function() {
         if (cuttedPage[cuttedPage.length-2] === event.target.id) return;
-        localStorage.setItem("lang", event.target.value ?? event.target.id);
-        console.log(`Changing lang to ${navigator.language.replace(navigator.language.slice(2), "")}`);
+        localStorage.setItem("lang", event.target.value);
+        console.log(`Changing lang to ${event.target.value}`);
         window.location.href = `https://${window.location.host}/${cuttedPage[cuttedPage.length-3]}/${event.target.value ?? event.target.id}/index.html`;
     });
 
@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             document.body.classList.add("fade");
         }
         this.classList.add("fade");
-        setTimeout(function() { document.body.classList.remove("fade"); }, 500)
+        setTimeout(function() { document.body.classList.remove("fade"); }, 500);
     }
 });
