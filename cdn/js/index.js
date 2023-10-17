@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     //      Retrieves the list of available languages
     fetch("/EIT/cdn/lang.json", { method: "GET", cache: "no-cache", mode: "no-cors" }).then(resp => {if (resp.status === 200) return resp.json()}).then(response => {
     
-        if ((localStorage.getItem("lang") === undefined || localStorage.getItem("lang") === null) && Object.hasOwnProperty.call(response, navigator.language.replace(navigator.language.slice(2), ""))) {
+        if ((localStorage.getItem("lang") === undefined || localStorage.getItem("lang") === null || localStorage.getItem("lang") !== navigator.language.replace(navigator.language.slice(2), "")) && Object.hasOwnProperty.call(response, navigator.language.replace(navigator.language.slice(2), ""))) {
             localStorage.setItem("lang", navigator.language.replace(navigator.language.slice(2), ""));
+            console.log(`Changing lang to ${navigator.language.replace(navigator.language.slice(2), "")}`);
             return window.location.href = `https://${window.location.host}/${cuttedPage[cuttedPage.length-3]}/${navigator.language.replace(navigator.language.slice(2), "")}/index.html`;
         }
 
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     document.getElementById("lang").addEventListener("change", function() {
         if (cuttedPage[cuttedPage.length-2] === event.target.id) return;
         localStorage.setItem("lang", event.target.value ?? event.target.id);
+        console.log(`Changing lang to ${navigator.language.replace(navigator.language.slice(2), "")}`);
         window.location.href = `https://${window.location.host}/${cuttedPage[cuttedPage.length-3]}/${event.target.value ?? event.target.id}/index.html`;
     });
 
