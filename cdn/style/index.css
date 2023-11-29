@@ -2,6 +2,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 body.dark {
     background: #333;
@@ -106,6 +107,36 @@ footer > span {
     display: block;
     margin: 3px;
     text-align: center;
+}
+#content {
+    margin: 5% 0 0 5%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    gap: 15% 2%;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+    background: #777;
+    box-shadow: 2px 2px 2px 2px gray;
+    transition: scale .5s;
+}
+.container:hover {
+    transform: scale(1.025);
+}
+.container > div {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.container > div > p {
+    color: #D1D1D1;
 }
 @keyframes fade {
     0% {

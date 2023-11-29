@@ -1,12 +1,15 @@
 {
     "LampLed": {
         "pictures": [
-            "/EIT/cdn/products/LampLed/1.png",
-            "/EIT/cdn/products/LampLed/2.png",
-            "/EIT/cdn/products/LampLed/3.png",
-            "/EIT/cdn/products/LampLed/4.png",
-            "/EIT/cdn/products/LampLed/5.png"
+            "./cdn/products/LampLed/1.png",
+            "./cdn/products/LampLed/2.png",
+            "./cdn/products/LampLed/3.png",
+            "./cdn/products/LampLed/4.png",
+            "./cdn/products/LampLed/5.png"
         ],
+        "id": "LampLed",
+        "thumbnail": "./cdn/products/LampLed/1.png",
+        "href": "./LampLed",
         "fr": {
             "name": "Lampe LED RGB",
             "description": "Lampe Led sur Pied Design RVB avec Télécommande",
