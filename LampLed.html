@@ -9,12 +9,50 @@
 </head>
 <body class="dark" style="margin: 0; height: 100%; width: 100%;">
     <div id="content">
-        <div id="header">
-            <div style="height: 100%">
-                <a id="home" href="./" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
+        <header>
+            <div style="height: 100%; margin: 0;">
+              <a href="./" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
+            </div>
+            <div style="margin: 0; display: flex;">
+                <button id="openBtn">
+                    <span class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                </boutton>
+            </div>
+        </header>
+        <div id="sideNav" class="sidenav">
+            <button id="closeBtn" class="close">x</button>
+            <div>
+                <a href="#" id="contact">Contact</a>
             </div>
             <div>
-                <button id="theme" style="cursor: pointer; display: flex; margin: 5px; height: 100%;width: 35px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 5px; background: white;">
+                <a href="#" id="legalInformation">Legal information TEST</a>
+            </div>
+            <div>
+                <select id="lang" value="es"></select>
+            </div>
+            <div>
+                <button onclick='
+this.classList.remove("fade");
+document.body.classList.remove("fade");
+if (localStorage.getItem("theme") === "light") {
+  localStorage.setItem("theme", "dark");
+  this.querySelector("img").src = "./cdn/img/sun.png";
+  document.body.classList.remove("light");
+  document.body.classList.add("dark");
+  document.body.classList.add("fade");
+} else {
+  localStorage.setItem("theme", "light");
+  this.querySelector("img").src = "./cdn/img/moon.png";
+  document.body.classList.remove("dark");
+  document.body.classList.add("light");
+  document.body.classList.add("fade");
+}
+this.classList.add("fade");
+setTimeout(function() { document.body.classList.remove("fade"); }, 500)' id="theme">
                     <img style="height: 100%;width: 100%;" src="./cdn/img/sun.png" alt="Theme">
                 </button>
             </div>
@@ -49,6 +87,8 @@
     <footer>
         <span>Copyright ® EIT - 2023 - All Right Reserved</span>
     </footer>
+    <script src="./cdn/js/lang.js"></script>
+    <script src="./cdn/js/theme.js"></script>
     <script src="./cdn/js/LampLed.js"></script>
 </body>
 </html>

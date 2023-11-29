@@ -6,18 +6,85 @@ body.light {
     background: #FFF;
     color: black;
 }
+body.dark > #content > header > div > button {
+    filter: invert();
+}
 .fade {
     animation: .5s ease 0s 1 normal none running fade;
 }
-#header {
+header {
     background: rgba(0, 0, 0, 0.25);
     border-bottom: 2px solid rgba(255, 255, 255, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#header > div {
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -20%;
+    background: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+    border-radius: 2vh 0 0 2vh;
+}
+.sidenav > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sidenav > div > * {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    transition: 0.3s;
+}
+.sidenav > div > *:hover {
+    color: #111;
+}
+  
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+}
+.sidenav.active {
+    right: 0;
+}
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    color: black;
+    transition: color 0.3s;
+}
+.sidenav .close:hover {
+    color: red;
+}
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+#theme {
+    cursor: pointer;
+    display: flex;
+    margin: 5px;
+    height: 100%;width: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: white;
 }
 #charContent {
     display: grid;
@@ -69,6 +136,9 @@ footer {
     z-index: 99;
     margin: 2% 0 0 0;
     background: rgba(0, 0, 0, .15);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer > span {
     display: block;
