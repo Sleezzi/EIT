@@ -46,13 +46,13 @@ fetch(`./cdn/products.json`, { method: "GET" }).then(resp => {if (resp.status ==
     span.style = "color: black;";
     span.ariaLabel = data.buy;
     span.innerHTML = data.buy;
-    document.getElementById("title").innerText = data.name ?? product;
+    document.getElementById("product").innerText = data.name ?? product;
     document.getElementById("description").innerText = data.description;
     document.getElementById("price").innerText = data.price;
     document.getElementById("buy").appendChild(img);
     document.getElementById("buy").appendChild(span);
     document.title = `EIT - ${product}`;
-    document.getElementById("charTitle").innerText = data.char[0].title;
+    document.querySelector("#charContent > h3").innerText = data.char[0].title;
     data.char.forEach(char => {
         if (!char.name || !char.value) return;
         const span = document.createElement("span");

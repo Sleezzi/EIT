@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>EIT - Lamp Led</title>
+    <link rel="stylesheet" href="./cdn/style/LampLed.css">
     <link rel="shortcut icon" href="./cdn/img/Logo.png" type="image/x-icon">
 </head>
 <body class="dark" style="margin: 0; height: 100%; width: 100%;">
     <div id="content">
-        <div id="header" style="background: rgba(0, 0, 0, 0.25); border-bottom: 2px solid rgba(255, 255, 255, 0.25); display: flex; justify-content: space-between; align-items: center;">
-            <div style="height: 100%; margin: 0;">
+        <div id="header">
+            <div style="height: 100%">
                 <a id="home" href="./" style="text-decoration: none; color: unset;"><h1 style="height: 100%; display: flex;font-family: fantasy; margin: 5px;">EIT</h1></a>
             </div>
-            <div style="margin: 0;">
+            <div>
                 <button id="theme" style="cursor: pointer; display: flex; margin: 5px; height: 100%;width: 35px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 5px; background: white;">
                     <img style="height: 100%;width: 100%;" src="./cdn/img/sun.png" alt="Theme">
                 </button>
             </div>
         </div>
-        <div id="content" style="display: flex; margin: 0;">
+        <div style="display: flex; margin: 0;">
             <div style="margin: 0; height: 100%; width: 65%;">
                 <div style="height: 100%; width: 100%; margin: 5% 0 0 0">
                     <div style="display: flex; align-items: center; justify-content: center; height: 100%; width: 100%">
-                        <button id="image" style="height: 50%; width: 50%; background: transparent; border: 0; cursor: pointer;"></button>
+                        <button id="image"></button>
                     </div>
                 </div>
             </div>
-            <div id="content" style="display: flex; margin: 0; justify-content: end; height: 100%; width: 35%;">
+            <div style="display: flex; margin: 0; justify-content: end; height: 100%; width: 35%;">
                 <div style="display: grid; margin: 0 5% 0 0; height: 100%; width: 100%;">
                     <div style="display: block; height: 100%; width: 100%;">
-                        <h4 style="display: block; text-align: center;" id="title"></h4>
-                        <span style="display: block; text-align: center; margin: 15px;" id="description"></span>
-                        <span style="display: block; text-align: center; margin: 2px;" id="price"></span>
+                        <h4 id="product"></h4>
+                        <span id="description"></span>
+                        <span id="price"></span>
                         <div style="display: flex; align-items: end; justify-content: center; margin: 5px;">
-                            <button id="buy" style="font-size: large; cursor: pointer; background: #00ff37; border-radius: 5px; border: 0; display: flex; justify-content: space-evenly; align-items: center; height: 50%; width: 90%; margin: 5px;"></button>
+                            <button id="buy"></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="content" style="display: flex; margin: 0; height: 100%; width: 100%;">
-            <div id="charContent" style="display: grid; margin: 15px 0 0 0; height: 100%; width: 100%;">
-                <h3 id="charTitle" style="text-align: center;"></h3>
+        <div>
+            <div id="charContent">
+                <h3></h3>
             </div>
         </div>
     </div>
-    <footer style="margin: 2% 0 0 0; background: rgba(0, 0, 0, .15)">
-        <span id style="display: block; margin: 3px; text-align: center;">Copyright ® EIT - 2023 - All Right Reserved</span>
+    <footer>
+        <span>Copyright ® EIT - 2023 - All Right Reserved</span>
     </footer>
     <script src="./cdn/js/LampLed.js"></script>
 </body>
