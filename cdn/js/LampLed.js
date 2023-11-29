@@ -51,7 +51,6 @@ fetch(`./cdn/products.json`, { method: "GET" }).then(resp => {if (resp.status ==
     document.getElementById("price").innerText = data.price;
     document.getElementById("buy").appendChild(img);
     document.getElementById("buy").appendChild(span);
-    document.getElementById("home").setAttribute("href", `./${cuttedPage[window.location.href.split("/").length-2]}/index.html`);
     document.title = `${cuttedPage[`${window.location.href.split("/").length-3}`]} - ${product}`;
     document.getElementById("charTitle").innerText = data.char[0].title;
     const style = document.createElement("link");
