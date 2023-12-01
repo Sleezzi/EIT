@@ -6,10 +6,10 @@ let image = {
 document.querySelector("#image").onmouseup = function() {
     if (image.current === image.pictures.length) {
         image.current = 1;
-        this.innerHTML = `<img alt="Picture1" style="height: 100%; width: 100%;" src="./cdn/products/${product}/${image.pictures[0]}">`;
+        this.innerHTML = `<img alt="Picture1" style="height: 100%; width: 100%;" src="${image.pictures[0]}">`;
     } else {
         image.current += 1;
-        this.innerHTML = `<img alt="Picture${image.current}" style="height: 100%; width: 100%;" src="./cdn/products/${product}/${image.pictures[image.current-1]}">`;
+        this.innerHTML = `<img alt="Picture${image.current}" style="height: 100%; width: 100%;" src="${image.pictures[image.current-1]}">`;
     }
 }
 fetch(`./cdn/products.json`, { method: "GET" }).then(resp => {if (resp.status === 200) return resp.json()}).then(response => {

@@ -33,7 +33,7 @@
             "buy": "Buy",
             "char": [
                 { "title": "Characteristic" },
-                { "name": "Size", "value": "3,30p" },
+                { "name": "Size", "value": "3.30p" },
                 { "name": "Length", "value": "?g" },
                 { "name": "Charger", "value": "USB C" },
                 { "name": "Material", "value": "Metal" },
