@@ -15,6 +15,9 @@ body.light {
     background: #FFF;
     color: black;
 }
+a {
+    text-decoration: none;
+}
 .fade {
     animation: .5s ease 0s 1 normal none running fade;
 }
@@ -48,7 +51,6 @@ button {
     justify-content: center;
 }
 .sidenav > div > * {
-    text-decoration: none;
     font-size: 25px;
     color: #818181;
     transition: 0.3s;

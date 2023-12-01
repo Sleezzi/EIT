@@ -19,6 +19,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+#content {
+    margin: 0 0 2% 0;
+}
 button {
     background: transparent;
     border: 0;
@@ -134,10 +137,7 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 99;
-    margin: 2% 0 0 0;
     background: rgba(0, 0, 0, .15);
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 footer > span {

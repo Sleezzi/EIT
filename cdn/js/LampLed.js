@@ -19,6 +19,7 @@ fetch(`./cdn/products.json`, { method: "GET" }).then(resp => {if (resp.status ==
     document.querySelector("#description").innerText = data.description;
     document.querySelector("#price").innerText = data.price;
 
+    document.querySelector("#buy").innerHTML = "";
     const img = document.createElement("img");
     img.style = "height: 25%; width: 10%; margin: 2px;";
     img.src = `./cdn/img/caddie.png`;
